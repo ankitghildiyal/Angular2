@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Learn AngularJS2: The Basics</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:700,400,100,200,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+
+	<!-- The first three are used to make certain features like classes and objects to work in older browsers.-->
+    <script src="js/lib/angular2/es6-shim.min.js"></script>
+    <script src="js/lib/angular2/system-polyfills.js"></script>
+    <script src="js/lib/angular2/angular2-polyfills.js"></script>
+	<!-- Below is the system.js library -->
+    <script src="js/lib/angular2/system.src.js"></script>
+	<!-- Below is reacts js library -->
+    <script src="js/lib/angular2/Rx.js"></script>
+	<!-- Below is basic angular 2 library. To use other features like routing and http you would need to import those dependencies as well -->
+    <script src="js/lib/angular2/angular2.dev.js"></script>
+	
+	<!-- Below is system js configuration. -->
+    <script>
+      System.config({
+        packages: {
+          js: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('js/boot')
+        .then(null, console.error.bind(console));
+    </script>
+  </head>
+
+<body>
+  <my-app>Loading...</my-app>
+  <my-Project>Loading my project</my-Project>
+</body>
+</html>
